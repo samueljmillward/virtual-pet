@@ -20,7 +20,7 @@ Pet.prototype.walk = function () {
     } else {
         this.fitness = MAXIMUM_FITNESS;
     }
-}
+};
 
 Pet.prototype.feed = function () {
     if ((this.hunger - 3) >= MINIMUM_HUNGER) {
@@ -28,5 +28,17 @@ Pet.prototype.feed = function () {
     } else {
         this.hunger = MINIMUM_HUNGER;
     }
-}
+};
+
+Pet.prototype.checkUp = function () {
+    if (this.fitness <= 3 && this.hunger >= 5) {
+        return "Feed me and walk me!";
+    } if (this.fitness <= 3) {
+        return "Walk me!";
+    } if (this.hunger >= 5) {
+        return "Feed me!";
+    } else { 
+        return "Feeling good!";
+    }   
+};
 module.exports = Pet;
