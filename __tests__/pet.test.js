@@ -105,4 +105,27 @@ describe('checkUp', () => {
         pet.checkUp();
         expect(pet.checkUp()).toBe("Walk me!")
     });
+
+describe('isAlive', ()  => {
+    it('returns pet mortality', () => {
+        const pet = new Pet('Fido')
+        pet.hunger = 11
+        pet.isAlive();
+        expect(pet.isAlive()).toBe("RIP")
+    })
+    it('returns pet mortality', () => {
+        const pet = new Pet('Fido')
+        pet.fitness = 0
+        pet.isAlive();
+        expect(pet.isAlive()).toBe("RIP")
+
+    });
+    it('returns pet mortality', () => {
+        const pet = new Pet('Fido')
+        pet.hunger = 9
+        pet.isAlive();
+        expect(pet.isAlive()).toBe("Feeling good!")
+    });
+
+});
 });
