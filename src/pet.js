@@ -55,6 +55,6 @@ Pet.prototype.checkUp = function () {
        return "RIP";
    } else {
        return "Feeling good!"
-   }*/
-};
+   }
+}; */
 module.exports = Pet;
